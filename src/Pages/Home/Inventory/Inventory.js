@@ -10,7 +10,7 @@ const Inventory = () => {
 
     return (
 
-        <div className='my-3 inventory-container container'>
+        <div className='my-3 inventory-container container '>
             <h2 className='text-center pt-4 text-success'>Our Inventory Items</h2>
 
             <div className='row'>

@@ -12,14 +12,17 @@ const InventoryInfo = ({ inventory }) => {
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <div className='d-flex justify-content-between '>
-                            <p className=''>Price: {price}</p>
-                            <p className=''>Quantity: {quantity}</p>
-                        </div>
-                        <small><span>Supplier Name :</span>{supplierName}</small>
                         <Card.Text>
-                            Description: {description}
+                            <small><span className='font-weight-bold'>Supplier Name :</span>{supplierName}</small>
+                            <p>
+                                Description: {description}
+                            </p>
                         </Card.Text>
+                        <div className='d-flex justify-content-between '>
+                            <p><span className='font-weight-bold'>Price : </span> {price}</p>
+                            <p> <span className='font-weight-bold'>Quantity : </span>{quantity}</p>
+                        </div>
+
                         <div className='d-flex justify-content-between'>
                             <button type="button" className="btn btn-dark">Deliver</button>
                             <button type="button" className="btn btn-dark">Manage Item</button>

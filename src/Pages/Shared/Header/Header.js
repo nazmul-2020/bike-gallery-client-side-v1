@@ -12,9 +12,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <Nav.Link href="/home">Home</Nav.Link>
-                            <Nav.Link href="/allInventory">AllInventory</Nav.Link>
+                            <Nav.Link href="/allInventory">All Inventory</Nav.Link>
                             <Nav.Link href="#priGcing">PrJJicing</Nav.Link>
-                            <Nav.Link href="#priHcing">PriFcing</Nav.Link>
+                            <Nav.Link href="/blog">Blog</Nav.Link>
                             <Nav.Link href="#pricWing">PricUing</Nav.Link>
                             
                         </Nav>
