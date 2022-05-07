@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "name": "Honda sp-125",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "2",
+        "name": "Honda Activa 6G",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "3",
+        "name": "Pabel",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "4",
+        "name": "Pabel",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "5",
+        "name": "Pabel",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "6",
+        "name": "Pabel",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    },
+    {
+        "id": "7",
+        "name": "Pabel",
+        "quantity":"20",
+        "price": 200,
+        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "supplierName":"asdf"
+    }
+]
