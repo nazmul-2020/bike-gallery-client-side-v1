@@ -1,0 +1,21 @@
+.notfound-container{
+    background-color: rgba(10, 10, 46, 0.712);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.notFound{
+    height: 400px;
+    width: 500px;
+    margin:  0 auto;
+    border-radius: 10px; 
+    color: red; 
+}
+
+.notFound img{
+    width: 100%;
+    border-radius: 10px;
+}

@@ -7,8 +7,6 @@ const InventoryInfo = ({ inventory }) => {
     return (
 
         <div className='my-3 inventory-container col-sm-12 col-md-6 col-lg-4'>
-
-
             <CardGroup>
                 <Card className='border-0 shadow-lg'>
                     <Card.Img variant="top" src={img} />
@@ -23,8 +21,8 @@ const InventoryInfo = ({ inventory }) => {
                             Description: {description}
                         </Card.Text>
                         <div className='d-flex justify-content-between'>
-                        <button type="button" className="btn btn-dark">Deliver</button>
-                        <button type="button" className="btn btn-dark">Manage Item</button>
+                            <button type="button" className="btn btn-dark">Deliver</button>
+                            <button type="button" className="btn btn-dark">Manage Item</button>
                         </div>
                     </Card.Body>
                 </Card>

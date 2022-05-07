@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useInventoryItem from '../../../hooks/useInventoryItem';
+import InventoryInfo from '../../InventoryInfo/InventoryInfo';
 import AllInventory from '../../InventoryInfo/InventoryInfo';
 import "./Inventory.css"
 
-const Inventory= () => {
+const Inventory = () => {
     const [inventories, setInventories] = useInventoryItem();
 
     return (
@@ -14,16 +15,15 @@ const Inventory= () => {
 
             <div className='row'>
                 {
-                    inventories.slice(0,6).map(inventory => <AllInventory
+                    inventories.slice(0, 6).map(inventory => <InventoryInfo
                         key={inventory.id}
                         inventory={inventory}
-                    ></AllInventory>)
+                    ></InventoryInfo>)
                 }
 
             </div>
-                <button type="button" className="btn btn-dark mx-auto my-5 d-flex"><Link to='/allInventory'> See All Inventory</Link></button>
+            <button type="button" className="btn btn-dark  mx-auto my-5 d-flex"><Link to='/allInventory' className=' text-decoration-none text-white'> See All Inventory</Link></button>
         </div>
-
 
     );
 };
