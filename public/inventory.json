@@ -4,62 +4,62 @@
         "name": "Honda sp-125",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "description": "The Honda SP 125 is powered by a 124 cc air-cooled engine which produces of power. It has a fuel tank of 11 L and a . The Honda SP 125 starts at ",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "supplierName":"Nazmul"
     },
     {
         "id": "2",
         "name": "Honda Activa 6G",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "description": "Honda Activa 6G is powered by 124 cc engine.This Activa 6G engine generates a power of 8.29 PS @ 6500 rpm and a torque of 10.3 Nm @ 5000 rpm.The Honda Activa 6G starts. ",
+        "img": "https://i.ibb.co/mFXLwd0/2.png",
+        "supplierName":"Hasan"
     },
     {
         "id": "3",
-        "name": "Pabel",
+        "name": "Bajaj Pulsar-150",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "description": "The Bajaj Pulsar 150 is powered by a 149.5 cc air-cooled engine which produces of power. It has a fuel tank of 15 L and a . The Bajaj Pulsar 150 starts at. ",
+        "img": "https://i.ibb.co/z2kkRr8/3.png",
+        "supplierName":"Kobir"
     },
     {
         "id": "4",
-        "name": "Pabel",
+        "name": "Yamaha fz-150",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
+        "description": "Yamaha FZ-X 150 ; 2-Wheeler Type, Naked ; Engine cc (Displacement), 149 cc ; Maximum Power, 12.4 HP @ 7250 rpm ; Maximum Torque, 13.3 Nm @ 5500 rpm ; Maximum Torque, 13.3 Nm @ 5500 rpm ;",
+        "img": "https://i.ibb.co/Fm8JN3C/5.png",
         "supplierName":"asdf"
     },
     {
         "id": "5",
-        "name": "Pabel",
+        "name": "Yamaha",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "description": "Yamaha Corporation, one of Japan's most diversified companies, is the world's largest maker of musical instruments, including pianos and keyboards, wind instruments, string and percussion instruments. ",
+        "img": "https://i.ibb.co/G0qf3hh/4.png",
+        "supplierName":"Mohsin"
     },
     {
         "id": "6",
-        "name": "Pabel",
+        "name": "Yamaha fz v3 ",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "description": "Displacement, 149 cc ; Engine Type, Air cooled, 4-stroke, SOHC, 2-valve ; No. of Cylinders, 1 ; Max Power, 12.4 PS @ 7250 rpm ; Max Torque, 13.3 Nm @ 5500 rpm. ",
+        "img": "https://i.ibb.co/WWVZnzd/6.png",
+        "supplierName":"Sbbir"
     },
     {
         "id": "7",
-        "name": "Pabel",
+        "name": "Honda",
         "quantity":"20",
         "price": 200,
-        "description": "Bought many computers over the years, but Dell stands out for quality and longevity. ",
+        "description": "The Honda SP 125 is powered by a 124 cc air-cooled engine which produces of power. It has a fuel tank of 11 L and a . The Honda SP 125 starts at. ",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50D2-VCTCyXy9lLF2btf5hSQMqAOiJ8eNwS2AVaxbdDC2iC2fvi8YpAw3HrBIfntCJQ&usqp=CAU",
-        "supplierName":"asdf"
+        "supplierName":"Pabel"
     }
 ]

@@ -12,11 +12,9 @@ const InventoryInfo = ({ inventory }) => {
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <Card.Text>
-                            <small><span className='font-weight-bold'>Supplier Name :</span>{supplierName}</small>
-                            <p>
-                                Description: {description}
-                            </p>
+                        <small><span className='font-weight-bold'>Supplier Name :</span>{supplierName}</small>
+                        <Card.Text className='text-justify'>
+                            <span className='font-weight-bold '>Description :</span> {description}
                         </Card.Text>
                         <div className='d-flex justify-content-between '>
                             <p><span className='font-weight-bold'>Price : </span> {price}</p>
@@ -24,8 +22,8 @@ const InventoryInfo = ({ inventory }) => {
                         </div>
 
                         <div className='d-flex justify-content-between'>
-                            <button type="button" className="btn btn-dark">Deliver</button>
-                            <button type="button" className="btn btn-dark">Manage Item</button>
+                            <button type="button" className="btn btn-dark">Update</button>
+                            <button type="button" className="btn btn-dark">Delivered</button>
                         </div>
                     </Card.Body>
                 </Card>
