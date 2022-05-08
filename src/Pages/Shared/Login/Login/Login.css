@@ -1,0 +1,11 @@
+.form-container{
+    width: 30%;
+    background-color: rgba(128, 128, 128, 0.202);
+}
+
+@media only screen and (max-width: 550px){
+    .form-container{
+        
+        width: 100%;
+    }
+}
