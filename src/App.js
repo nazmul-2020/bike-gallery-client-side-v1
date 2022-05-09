@@ -6,10 +6,12 @@ import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home/Home';
 
 import NotFound from './Pages/NotFound/NotFound';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Login from './Pages/Shared/Login/Login/Login';
 import SignUp from './Pages/Shared/Login/SignUp/SignUp';
+import UpdateItems from './Pages/UpdateItems/UpdateItems';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path='home' element={<Home></Home>}></Route>
         <Route path='/allInventory' element={<AllInventory></AllInventory>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/update' element={<PrivateRoute>
+          <UpdateItems></UpdateItems>
+        </PrivateRoute>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>

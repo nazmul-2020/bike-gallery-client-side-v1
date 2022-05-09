@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const InventoryInfo = ({ inventory }) => {
     const { name, quantity, price, description, img, supplierName } = inventory
@@ -22,7 +23,9 @@ const InventoryInfo = ({ inventory }) => {
                         </div>
 
                         <div className='d-flex justify-content-between'>
-                            <button type="button" className="btn btn-dark">Update</button>
+                            <Link to='/update'>
+                                <button type="button" className="btn btn-dark">Update</button>
+                            </Link>
                             <button type="button" className="btn btn-dark">Delivered</button>
                         </div>
                     </Card.Body>
