@@ -22,7 +22,7 @@ const Inventory = () => {
                 }
 
             </div>
-            <button type="button" className="btn btn-dark  mx-auto my-5 d-flex"><Link to='/allInventory' className=' text-decoration-none text-white'> See All Inventory</Link></button>
+            <button type="button" className="btn btn-dark  mx-auto my-5 d-flex"><Link to='/allInventory' className=' text-decoration-none text-white'> Manage Inventories</Link></button>
         </div>
 
     );

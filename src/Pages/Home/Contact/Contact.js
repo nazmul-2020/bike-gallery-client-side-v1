@@ -2,12 +2,13 @@ import React from 'react';
 import './Contact.css';
 
 const Contact = () => (
+
     <div className="contact my-5 h-">
-            <div className="title ">
-                <h1 className='text-success'>Contact Us</h1>
-            </div>
-            <div className=''>
-        <div className="container  ">
+        <div className="title ">
+            <h1 className='text-success'>Contact Us</h1>
+        </div>
+        <div className=''>
+            <div className="container  ">
 
                 <div className="contact-form ">
                     <div className="input-fields bg-dark p-4 rounded shadow-lg ">
