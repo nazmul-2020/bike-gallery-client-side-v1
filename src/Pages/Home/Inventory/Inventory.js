@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useInventoryItem from '../../../hooks/useInventoryItem';
 import InventoryInfo from '../../InventoryInfo/InventoryInfo';
-import AllInventory from '../../InventoryInfo/InventoryInfo';
 import "./Inventory.css"
 
 const Inventory = () => {
@@ -16,7 +15,7 @@ const Inventory = () => {
             <div className='row'>
                 {
                     inventories.slice(0, 6).map(inventory => <InventoryInfo
-                        key={inventory.id}
+                        key={inventory._id}
                         inventory={inventory}
                     ></InventoryInfo>)
                 }

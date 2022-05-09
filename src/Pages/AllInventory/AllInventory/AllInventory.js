@@ -17,7 +17,7 @@ const AllInventory = () => {
             <div className='row'>
                 {
                     inventories.map(inventory => <AllInventoryinfo
-                        key={inventory.id}
+                        key={inventory._id}
                         inventory={inventory}
                     ></AllInventoryinfo>)
                 }
