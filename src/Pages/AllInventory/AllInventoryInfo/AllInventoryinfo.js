@@ -20,7 +20,7 @@ const AllInventoryinfo = ({ inventory }) => {
                             <p><span className='font-weight-bold'>Quantity : </span>{quantity}</p>
                         </div>
                         <div className='d-flex mt-2'>
-                            <button type="button" className="btn btn-outline-dark mx-auto text-center">Manage Item</button>
+                            <button type="button" className="btn btn-outline-dark mx-auto text-center">Delete</button>
                         </div>
                     </Card.Body>
                 </Card>
