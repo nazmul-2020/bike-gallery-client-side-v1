@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
@@ -12,15 +12,12 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     let errorElement;
 
-    if(loading){
+    if (loading) {
         return <Loading></Loading>
-
     }
 
     if (error) {
-        errorElement =  <p className='text-danger'>Error: {error?.message} </p>
-        
-
+        errorElement = <p className='text-danger'>Error: {error?.message} </p>
     }
 
     if (user) {
@@ -28,6 +25,7 @@ const SocialLogin = () => {
             navigate('/home')
         );
     }
+
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -41,7 +39,7 @@ const SocialLogin = () => {
                     <button onClick={() => signInWithGoogle()} className='btn  w-75 text-white mx-auto d-block my-3 bg-primary'>
                         <span className='px-2'>Google Sign In</span>
                     </button>
-                    
+
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@ function App() {
         <Route path='home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/allInventory' element={<PrivateRoute>
-          <AllInventory></AllInventory>
+        <AllInventory></AllInventory>
         </PrivateRoute>}></Route>
         <Route path='/update' element={<PrivateRoute>
           <UpdateItems></UpdateItems>

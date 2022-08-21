@@ -11,11 +11,7 @@ import g8 from '../../../images/Gallery/g8.jpg'
 const Gallery = () => {
     return (
         <div>
-            <h1 className='text-center p-4 text-success'>Photo Gallery</h1>
-
-
-
-            <div className="container mt-5">
+            <h1 className='text-center p-4 text-success'>Photo Gallery</h1><div className="container mt-5">
                 <div className="row">
                     <div className="col-4">
                         <div className="row">
@@ -53,9 +49,6 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     );
 };
