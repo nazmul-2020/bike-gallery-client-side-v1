@@ -6,6 +6,7 @@ import "./Inventory.css"
 
 const Inventory = () => {
     const [inventories, setInventories] = useInventoryItem();
+    const newInventories = inventories.slice(0, 6)
 
     return (
 
@@ -14,7 +15,7 @@ const Inventory = () => {
 
             <div className='row'>
                 {
-                    inventories.slice(0, 6).map(inventory => <InventoryInfo
+                    newInventories.map(inventory => <InventoryInfo
                         key={inventory._id}
                         inventory={inventory}
                     ></InventoryInfo>)

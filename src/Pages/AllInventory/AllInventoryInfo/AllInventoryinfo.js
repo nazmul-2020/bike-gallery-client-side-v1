@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import useInventoryItem from '../../../hooks/useInventoryItem';
 
 const AllInventoryinfo = ({ inventory }) => {
     const { name, quantity, price, description, img, supplierName } = inventory;
+console.log(inventory)
 
     const [item, setItem] = useState([]);
-    useEffect( () =>{
-        fetch('https://agile-depths-49882.herokuapp.com/item')
-        .then(res => res.json())
-        .then(data => setItem(data));
-    }, []);
+    const [inventories, setInventories] = useInventoryItem([]);
+    const navigate = useNavigate();
 
-
-    
+    // useEffect( () =>{
+    //     fetch('https://agile-depths-49882.herokuapp.com/item')
+    //     .then(res => res.json())
+    //     .then(data => setItem(data));
+    // }, []);
     
 
     const handelDelete = id => {
@@ -45,6 +48,10 @@ const AllInventoryinfo = ({ inventory }) => {
                             <p><span className='font-weight-bold'>Quantity : </span>{quantity}</p>
                         </div>
                         <div className='d-flex mt-2'>
+                            {/* <button onClick={() => navigate(`/inventory/${_id}`)} type="button" className="btn btn-dark d-block w-100">Stock Update</button> */}
+
+                            {/* <button type="button" className="btn btn-outline-dark mx-auto text-center" onClick={()=>navigate(`/inventory/${item._id}`)}>Delete</button> */}
+                            
                             <button type="button" className="btn btn-outline-dark mx-auto text-center" onClick={()=>handelDelete(item._id)}>Delete</button>
                         </div>
                     </Card.Body>

@@ -1,9 +1,17 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const InventoryInfo = ({ inventory }) => {
-    const { name, quantity, price, description, img, supplierName } = inventory
+    const { _id, name, quantity, price, description, img, supplierName } = inventory
+    // console.log(inventory._id);
+
+    const navigate = useNavigate();
+
+    /* navigate 2 */
+    // const aaa = id => {
+    //     navigate(`/inventory/${_id}`)
+    // }
 
     return (
 
@@ -22,11 +30,18 @@ const InventoryInfo = ({ inventory }) => {
                             <p> <span className='font-weight-bold'>Quantity : </span>{quantity}</p>
                         </div>
 
-                        <div className='d-flex justify-content-between'>
-                            <Link to='/update'>
-                                <button type="button" className="btn btn-dark">Update</button>
-                            </Link>
-                            <button type="button" className="btn btn-dark">Delivered</button>
+                        <div className=''>
+                            {/* navigate 1 */}
+                            {/* <Link to={`/inventory/${_id}`}>
+                                <button type="button" className="btn btn-dark d-block w-100">Stock Update</button>
+                            </Link> */}
+
+                            {/* navigate 2 */}
+                            {/* <button onClick={()=>aaa (_id)} type="button" className="btn btn-dark d-block w-100">Stock Update</button> */}
+
+                            {/* navigate 3 */}
+                            <button onClick={() => navigate(`/inventory/${_id}`)} type="button" className="btn btn-dark d-block w-100">Stock Update</button>
+
                         </div>
                     </Card.Body>
                 </Card>

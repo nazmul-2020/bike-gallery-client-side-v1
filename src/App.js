@@ -25,24 +25,29 @@ function App() {
         <Route path='home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/allInventory' element={<PrivateRoute>
-        <AllInventory></AllInventory>
-        </PrivateRoute>}></Route>
-        <Route path='/update' element={<PrivateRoute>
+          <AllInventory></AllInventory>
+        </PrivateRoute>}>
+        </Route>
+
+        <Route path='/inventory/:id'
+         element={<PrivateRoute>
           <UpdateItems></UpdateItems>
-        </PrivateRoute>}></Route>
+        </PrivateRoute>}
+        ></Route>
+        
         <Route path='/myItems' element={<PrivateRoute>
           <MyItems></MyItems>
         </PrivateRoute>}></Route>
         <Route path='/addItem' element={<PrivateRoute>
           <AddItem></AddItem>
         </PrivateRoute>}></Route>
-        
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }
