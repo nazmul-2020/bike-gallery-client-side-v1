@@ -4,25 +4,28 @@ import { useNavigate } from 'react-router-dom';
 import useInventoryItem from '../../../hooks/useInventoryItem';
 
 const AllInventoryinfo = ({ inventory }) => {
-    const { name, quantity, price, description, img, supplierName } = inventory;
-console.log(inventory)
+    const {_id, name, quantity, price, description, img, supplierName } = inventory;
+// console.log(inventory)
 
-    const [item, setItem] = useState([]);
-    const [inventories, setInventories] = useInventoryItem([]);
+    const [item, setItem] = useState({});
+    // const [inventories, setInventories] = useInventoryItem([]);
     const navigate = useNavigate();
 
-    // useEffect( () =>{
-    //     fetch('https://agile-depths-49882.herokuapp.com/item')
-    //     .then(res => res.json())
-    //     .then(data => setItem(data));
-    // }, []);
+    useEffect( () =>{
+        fetch('http://localhost:5000/item')
+        .then(res => res.json())
+        .then(data => setItem(data));
+    }, []);
     
 
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
-            fetch(url)
+            const url = `http://localhost:5000/item/${id}`
+            console.log(url)
+            fetch(url,{
+                method:"DELETE"
+            })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

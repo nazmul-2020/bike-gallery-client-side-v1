@@ -8,7 +8,7 @@ const AddItem = () => {
 
     const onSubmit = data => {
         console.log(data)
-        const url = `https://agile-depths-49882.herokuapp.com/item`;
+        const url = `http://localhost:5000/item`;
         fetch(url, {
             method: 'POST',
             headers: {
