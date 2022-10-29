@@ -13,11 +13,11 @@ const UpdateItems = () => {
     // console.log(name)
 
     useEffect(() => {
-        // const url = `http://localhost:5000/item/${id}`
-        fetch(`http://localhost:5000/item/${id}`)
+        // const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
+        fetch(`https://agile-depths-49882.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [id])
+    }, [id,item])
 
     
     // handle deliver
@@ -27,7 +27,7 @@ const UpdateItems = () => {
     } else {
       const oldQuantity = parseInt(quantity);
       const updateQuantity = oldQuantity - 1;
-      const url = `http://localhost:5000/item/${id}`;
+      const url = `https://agile-depths-49882.herokuapp.com/item/${id}`;
       console.log(url)
             fetch(url, {
         method: 'PUT',
