@@ -7,93 +7,114 @@ const UpdateItems = () => {
     const { id } = useParams();
     // console.log(id)
     const [item, setItem] = useState({});
-    const { quantity} = item;
-    // console.log(quantity)
+    const { quantity } = item;
+    // console.log(item);
 
-    // console.log(name)
 
     useEffect(() => {
         // const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
         fetch(`https://agile-depths-49882.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [id,item])
+    }, [id, item])
 
-    
+
     // handle deliver
-  const handelDelivered = () => {
-    if (quantity <= 0) {
-      toast.error('This item is Sold out');
-    } else {
-      const oldQuantity = parseInt(quantity);
-      const updateQuantity = oldQuantity - 1;
-      const url = `https://agile-depths-49882.herokuapp.com/item/${id}`;
-      console.log(url)
+    const handelDelivered = () => {
+        if (quantity <= 0) {
+            toast.error('This item is Sold out');
+        } else {
+            const oldQuantity = parseInt(quantity);
+            const updateQuantity = oldQuantity - 1;
+            const url = `https://agile-depths-49882.herokuapp.com/item/${id}`;
             fetch(url, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ quantity: updateQuantity }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          toast.success('Deliver 1 item');
-        });
-    }
-  };
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ quantity: updateQuantity }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    toast.success('Deliver 1 item');
+                });
+        }
+    };
+
+    // const handleQuantity = (e) => {
+    //     e.preventDefault();
 
 
 
-        // const handelDelivered = () => {
-        //     if (quantity <= 0) {
-        //       toast.error('This item is Sold out');
-        //     } else {
-        //       const oldQuantity = parseInt(quantity);
-        //       const updateQuantity = oldQuantity - 1;
-        //       const url = `https://localhost:5000/item/${id}`;
-        //       console.log(url)
+    //     const url = `http://localhost:5000/item/${id}`;
+    //     fetch(url, 
+    //         {
+    //       method: 'PUT',
+    //       headers: { 'Content-Type': 'application/json' },
+    //       body: JSON.stringify({ quantity: +reStack + +quantity }),
+    //     });
+    //     setReStack(0);
+    //     if (reStack === 0) {
+    //       toast.error('please input quantity');
+    //     } else {
+    //       toast.success('Successfully ReStock item');
+    //     }
+    // };
 
-        //       fetch(url, {
-        //         method: 'PUT',
-        //         headers: { 'Content-Type': 'application/json' },
-        //         body: JSON.stringify({ quantity: updateQuantity }),
-        //       })
-        //         .then((res) => res.json())
-        //         .then((data) => {
-        //           console.log(data,'ok');
-        //           toast.success('Deliver 1 item');
-        //         });
-        //     }
-        //   };
+    const handleQuantity = (event) => {
+        event.preventDefault();
+         
+        let inputFiled = event.target.quantity.value;
+        let remaining = parseFloat(+item.quantity) + parseFloat(inputFiled);
+        let newInventory = {
+            quantity: remaining,
+        };
+        
+        fetch(`http://localhost:5000/item/${id}`, {
+            method: "PUT",
+            body: JSON.stringify(newInventory),
+            headers: {
+                "Content-type": "application/json",
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                event.target.reset();
+                console.log(data);
+            });
+    };
 
-        return (
-            <div>
-                <div className='container my-5'>
-                    <div className='row ber g-4'>
-                        <div className="col col-md-6 col-lg-6 border border-3">
-                            <img className='w-100 img-fluid' src={item.img} alt="" />
+    return (
+        <div>
+            <div className='container my-5'>
+                <div className='row ber g-4'>
+                    <div className="col col-md-6 col-lg-6 border border-3">
+                        <img className='w-100 img-fluid' src={item.img} alt="" />
+                    </div>
+                    <div className="col col-md-6 col-lg-6 border-dark border border-3 p-3">
+                        <div className=''>
+                            <p className='mb-1'>Name : {item.name}</p>
+                            <p className='mb-1'>ID : {item._id}</p>
+                            <p className='mb-1'>Price : {item.price}</p>
+                            <p className='mb-1'>Description : {item.description}</p>
+                            <p className='mb-1'>Supplier : {item.supplierName}</p>
+                            <p className=''>Quantity : {item.quantity}</p>
                         </div>
-                        <div className="col col-md-6 col-lg-6 border-dark border border-3 p-3">
-                            <div className=''>
-                                <p className='mb-1'>Name : {item.name}</p>
-                                <p className='mb-1'>ID : {item._id}</p>
-                                <p className='mb-1'>Price : {item.price}</p>
-                                <p className='mb-1'>Description : {item.description}</p>
-                                <p className='mb-1'>Supplier : {item.supplierName}</p>
-                                <p className=''>Quantity : {item.quantity}</p>
-                            </div>
 
-                            <div className='mb-3 d-flex'>
-                                <button onClick={handelDelivered} className='btn btn-secondary'>Delivered</button>
-                                <input type="text" name="" className=' form-control text-center rounded  mx-2' style={{ width: "10%" }} id="" />
-                                <button className='btn btn-secondary'>ReStock items</button>
+                        <div className='mb-3 d-flex'>
+                            <button onClick={handelDelivered} className='btn btn-secondary'>Delivered</button>
+                            <div>
+                                <form className='d-flex' onSubmit={handleQuantity}>
+                                    <input type="number" required  name="quantity" className=' form-control text-center rounded  mx-2' style={{ width: "25%" }} id="" />
+                                    <button type='submit' className='btn btn-secondary'>ReStock items</button>
+                                </form>
                             </div>
-                            <ToastContainer />
                         </div>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>
-        );
-    };
- 
- export default UpdateItems;
+        </div>
+    );
+};
+
+export default UpdateItems;

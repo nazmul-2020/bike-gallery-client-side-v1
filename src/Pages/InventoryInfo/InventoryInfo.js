@@ -41,7 +41,6 @@ const InventoryInfo = ({ inventory }) => {
 
                             {/* navigate 3 */}
                             <button onClick={() => navigate(`/inventory/${_id}`)} type="button" className="btn btn-dark d-block w-100">Stock Update</button>
-
                         </div>
                     </Card.Body>
                 </Card>
