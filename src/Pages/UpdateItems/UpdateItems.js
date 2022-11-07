@@ -60,6 +60,7 @@ const UpdateItems = () => {
             .then((res) => res.json())
             .then((data) => {
                 event.target.reset();
+                toast.success('Successfully ReStock item  ')
                 console.log(data);
             });
     };

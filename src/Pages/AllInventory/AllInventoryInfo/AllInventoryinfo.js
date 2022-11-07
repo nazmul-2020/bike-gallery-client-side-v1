@@ -1,38 +1,55 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import useInventoryItem from '../../../hooks/useInventoryItem';
+import Swal from 'sweetalert2'
 
 const AllInventoryinfo = ({ inventory }) => {
-    const {_id, name, quantity, price, description, img, supplierName } = inventory;
-// console.log(inventory)
+    const { _id, name, quantity, price, description, img, supplierName } = inventory;
+    // console.log(_id)
 
-    const [item, setItem] = useState({});
-    // const [inventories, setInventories] = useInventoryItem([]);
+    const [items, setItems] = useState({});
     const navigate = useNavigate();
 
-    useEffect( () =>{
+    useEffect(() => {
         fetch('https://agile-depths-49882.herokuapp.com/item')
-        .then(res => res.json())
-        .then(data => setItem(data));
+            .then(res => res.json())
+            .then(data => {
+                setItems(data)
+                // console.log(data)
+            });
     }, []);
-    
 
-    const handelDelete = id => {
-        const proceed = window.confirm('Are you sure?');
-        if (proceed) {
-            const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
-            console.log(url)
-            fetch(url,{
-                method:"DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    const remaining = item.filter(service => service._id !== id)
-                    setItem(remaining)
+
+    const handelDelete = (id) => {
+        // const proceed = window.confirm('Are you sure?');
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to delete this item!!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+                const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
+                fetch(url, {
+                    method: "DELETE"
                 })
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        const remaining = items.filter(service => service._id !== id)
+                        setItems(remaining)
+                    })
+            }
+        })
+
     }
 
     return (
@@ -50,12 +67,11 @@ const AllInventoryinfo = ({ inventory }) => {
                             <p><span className='font-weight-bold'>Price : </span> {price}</p>
                             <p><span className='font-weight-bold'>Quantity : </span>{quantity}</p>
                         </div>
-                        <div className='d-flex mt-2'>
-                            {/* <button onClick={() => navigate(`/inventory/${_id}`)} type="button" className="btn btn-dark d-block w-100">Stock Update</button> */}
+                        <div className='d-flex justify-content-between mt-2'>
 
-                            {/* <button type="button" className="btn btn-outline-dark mx-auto text-center" onClick={()=>navigate(`/inventory/${item._id}`)}>Delete</button> */}
-                            
-                            <button type="button" className="btn btn-outline-dark mx-auto text-center" onClick={()=>handelDelete(item._id)}>Delete</button>
+                            <button onClick={() => navigate(`/inventory/${_id}`)} type="button" className="btn btn-dark d-block ">Stock Update</button>
+
+                            <button type="button" className="btn btn-outline-danger d-block mx-aut " onClick={() => handelDelete(_id)}>Delete</button>
                         </div>
                     </Card.Body>
                 </Card>

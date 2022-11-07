@@ -9,7 +9,7 @@ const useInventoryItem = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
             
-    }, [])
+    }, [inventories, setInventories])
 
     return [inventories, setInventories]
 }
