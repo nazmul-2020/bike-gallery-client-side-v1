@@ -40,25 +40,6 @@ const UpdateItems = () => {
         }
     };
 
-    // const handleQuantity = (e) => {
-    //     e.preventDefault();
-
-
-
-    //     const url = `http://localhost:5000/item/${id}`;
-    //     fetch(url, 
-    //         {
-    //       method: 'PUT',
-    //       headers: { 'Content-Type': 'application/json' },
-    //       body: JSON.stringify({ quantity: +reStack + +quantity }),
-    //     });
-    //     setReStack(0);
-    //     if (reStack === 0) {
-    //       toast.error('please input quantity');
-    //     } else {
-    //       toast.success('Successfully ReStock item');
-    //     }
-    // };
 
     const handleQuantity = (event) => {
         event.preventDefault();
@@ -69,7 +50,7 @@ const UpdateItems = () => {
             quantity: remaining,
         };
         
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://agile-depths-49882.herokuapp.com/item/${id}`, {
             method: "PUT",
             body: JSON.stringify(newInventory),
             headers: {
