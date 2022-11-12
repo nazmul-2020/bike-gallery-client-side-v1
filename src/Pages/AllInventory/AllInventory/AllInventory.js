@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useInventoryItem from '../../../hooks/useInventoryItem';
-import AllInventoryinfo from '../AllInventoryInfo/AllInventoryinfo';
+import AllInventoryInfo from '../AllInventoryInfo/AllInventoryinfo';
 
 const AllInventory = () => {
     const [inventories, setInventories] = useInventoryItem();
@@ -16,10 +16,10 @@ const AllInventory = () => {
 
             <div className='row'>
                 {
-                    inventories.map(inventory => <AllInventoryinfo
+                    inventories.map(inventory => <AllInventoryInfo
                         key={inventory._id}
                         inventory={inventory}
-                    ></AllInventoryinfo>)
+                    ></AllInventoryInfo>)
                 }
             </div>
         </div>

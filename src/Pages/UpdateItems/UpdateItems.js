@@ -5,10 +5,8 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const UpdateItems = () => {
     const { id } = useParams();
-    // console.log(id)
     const [item, setItem] = useState({});
     const { quantity } = item;
-    // console.log(item);
 
 
     useEffect(() => {
@@ -16,7 +14,7 @@ const UpdateItems = () => {
         fetch(`https://agile-depths-49882.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [id, item])
+    }, [id])
 
 
     // handle deliver
@@ -66,7 +64,7 @@ const UpdateItems = () => {
     };
 
     return (
-        <div>
+        <div   style={{height:"80vh"}} >
             <div className='container my-5'>
                 <div className='row ber g-4'>
                     <div className="col col-md-6 col-lg-6 border border-3">

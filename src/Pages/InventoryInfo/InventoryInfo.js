@@ -15,6 +15,7 @@ const InventoryInfo = ({ inventory }) => {
 
     return (
 
+        <div>
         <div className='my-3 inventory-container col-sm-12 col-md-6 col-lg-4'>
             <CardGroup>
                 <Card className='border-0 shadow-lg'>
@@ -45,6 +46,7 @@ const InventoryInfo = ({ inventory }) => {
                     </Card.Body>
                 </Card>
             </CardGroup>
+        </div>
         </div>
 
     );
