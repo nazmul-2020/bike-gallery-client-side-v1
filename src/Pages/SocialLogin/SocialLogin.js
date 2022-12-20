@@ -6,21 +6,23 @@ import Loading from '../Shared/Loading/Loading';
 
 const SocialLogin = () => {
 
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    // const [signInWithXXX, user, loading, error] = useSignInWithXXX(auth);
+    console.log(gUser)
 
     const navigate = useNavigate();
+
     let errorElement;
 
-    if (loading) {
+    if (gLoading) {
         return <Loading></Loading>
     }
 
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message} </p>
+    if (gError) {
+        errorElement = <p className='text-danger'>Error: {gError?.message} </p>
     }
 
-    if (user) {
+    if (gUser) {
         return (
             navigate('/home')
         );

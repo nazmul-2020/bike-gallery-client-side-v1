@@ -4,47 +4,64 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init"
 import { AiOutlineDelete } from 'react-icons/ai';
 import { Table } from 'react-bootstrap';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const MyItems = () => {
     let n = 0;
-    const [items, setItems] = useInventoryItem();
     const [user] = useAuthState(auth)
-    return (
-        <div className='container my-5'>
+    // console.log(user)
+    // const [items, setItems] = useState([]);
+    const [items, setItems] = useInventoryItem();
+    // console.log(items)
 
+    useEffect(() => {
+        const email = user.email
+        // console.log(email)
+        const url = `http://localhost:5000/myItem?email=${email}`
+        console.log(url)
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=>{setItems(data)
+        // console.log(data)
+        })
+    }, [])
+
+
+    return (
+        <div className='container my-5 '>
+            {/* <h2 className='text-center mb-2'>MyItems : {itemsa.length}</h2> */}
             <h2 className='text-center mb-2'>MyItems : {items.length}</h2>
             <p className='text-center'>{user?.displayName}</p>
-            {/* <img src={user?.photoURL} alt="" /> */}
-           
- 
+            <img src={user?.photoURL} alt="" />
 
-                    <div className='border'>
-                    <Table className='text-center' hover size="">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Quantity</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+            <div className='border'>
+                <Table className='text-center' hover size="">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                            {
-                                items.map(item => <tr key={item._id}>
-                                    <td>{++n}</td>
-                                    <td><img className='rounded-circle' width={"70px"} src={item.img} alt="" /></td>
-                                    <td>{item.name}</td>
-                                    <td>{item.quantity}</td>
-                                    <td><h3><AiOutlineDelete className='text-danger fw-bold'/></h3></td>
-                                </tr>)
-                            }
+                        {
+                            items.map(item => <tr key={item._id}>
+                                <td>{++n}</td>
+                                <td><img className='rounded-circle' width={"70px"} src={item.img} alt="" /></td>
+                                <td>{item.name}</td>
+                                <td>{item.quantity}</td>
+                                <td><h3><AiOutlineDelete className='text-danger fw-bold' /></h3></td>
+                            </tr>)
+                        }
 
 
-                        </tbody>
-                    </Table>
-                    </div>
+                    </tbody>
+                </Table>
+            </div> 
 
 
 
@@ -55,7 +72,7 @@ const MyItems = () => {
 
 
 
-                    {/* <table className="min-w-full"  >
+            {/* <table className="min-w-full"  >
                 <thead className="bg-white border-[1px] ">
                     <tr>
                         <th scope="col" className="text-sm font-medium text-gray-900 lg:px-6text-left">
@@ -150,8 +167,8 @@ const MyItems = () => {
 
 
 
-                </div>
-                );
+        </div>
+    );
 };
 
-                export default MyItems;
+export default MyItems;

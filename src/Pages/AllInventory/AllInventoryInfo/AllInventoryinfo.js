@@ -11,7 +11,7 @@ const AllInventoryinfo = ({ inventory }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://agile-depths-49882.herokuapp.com/item')
+        fetch('https://bike-gallery-server-side.up.railway.app/item')
             .then(res => res.json())
             .then(data => {
                 setItems(data)
@@ -37,7 +37,7 @@ const AllInventoryinfo = ({ inventory }) => {
                     'Your file has been deleted.',
                     'success'
                 )
-                const url = `https://agile-depths-49882.herokuapp.com/item/${id}`
+                const url = `https://bike-gallery-server-side.up.railway.app/item/${id}`
                 fetch(url, {
                     method: "DELETE"
                 })
