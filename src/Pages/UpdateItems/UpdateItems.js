@@ -10,8 +10,8 @@ const UpdateItems = () => {
 
 
     useEffect(() => {
-        // const url = `https://bike-gallery-server-side.up.railway.app/item/${id}`
-        fetch(`https://bike-gallery-server-side.up.railway.app/item/${id}`)
+        // const url = `https://bike-gallery-server-side.onrender.com/item/${id}`
+        fetch(`https://bike-gallery-server-side.onrender.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [id])
@@ -24,7 +24,7 @@ const UpdateItems = () => {
         } else {
             const oldQuantity = parseInt(quantity);
             const updateQuantity = oldQuantity - 1;
-            const url = `https://bike-gallery-server-side.up.railway.app/item/${id}`;
+            const url = `https://bike-gallery-server-side.onrender.com/item/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
@@ -48,7 +48,7 @@ const UpdateItems = () => {
             quantity: remaining,
         };
         
-        fetch(`https://bike-gallery-server-side.up.railway.app/item/${id}`, {
+        fetch(`https://bike-gallery-server-side.onrender.com/item/${id}`, {
             method: "PUT",
             body: JSON.stringify(newInventory),
             headers: {

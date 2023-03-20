@@ -5,7 +5,7 @@ const useInventoryItem = () => {
     const [inventories, setInventories] = useState([]);
 
     useEffect(() => {
-        fetch('https://bike-gallery-server-side.up.railway.app/item')
+        fetch('https://bike-gallery-server-side.onrender.com/item')
             .then(res => res.json())
             .then(data => setInventories(data))
             

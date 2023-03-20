@@ -12,7 +12,7 @@ const AddItem = () => {
 
 
     const onSubmit = data => {
-        const url = `https://bike-gallery-server-side.up.railway.app/item`;
+        const url = `https://bike-gallery-server-side.onrender.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {
