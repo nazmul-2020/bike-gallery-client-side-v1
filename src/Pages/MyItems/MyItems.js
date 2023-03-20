@@ -18,7 +18,7 @@ const MyItems = () => {
     useEffect(() => {
         const email = user.email
         // console.log(email)
-        const url = `http://localhost:5000/myItem?email=${email}`
+        const url = `https://bike-gallery-server-side.onrender.com/myItem?email=${email}`
         console.log(url)
         fetch(url)
         .then(res=>res.json())
